@@ -1,0 +1,17 @@
+@{
+    ViewData["Nav"] = 1;
+    ViewData["Header"] = "Add a chef";
+}
+@model Chef
+<form asp-action="CreateChef" asp-controller="Home" method="post" class="d-flex flex-column">
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName">
+    <span asp-validation-for="FirstName"></span>
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName">
+    <span asp-validation-for="LastName"></span>
+    <label asp-for="Birthday"></label>
+    <input asp-for="Birthday">
+    <span asp-validation-for="Birthday"></span>
+    <button type="submit" class="btn btn-info">Add a chef</button>
+</form>
